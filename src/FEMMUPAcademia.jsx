@@ -68,14 +68,13 @@ export default function FEMMUPAcademia() {
   <p className="uppercase tracking-[0.4em] text-sm mb-6 opacity-70 font-light">
     EDUCACIÓN
   </p>
+<div className="h-14 md:h-16 flex items-center">
+  <img
+    src="/logo-femmup.png."
+    alt="/logo-femmup.png."
+    className="h-full w-auto object-contain"
+  />
 
-  <h1 className="leading-none text-white">
-    <img
-      src="/logo-femmup.png."
-      alt="/logo-femmup.png."
-      className="h-full w-auto object-contain"
-    />
-  </h1>
 </div>
 
 
