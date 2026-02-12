@@ -20,7 +20,11 @@ export default function FEMMUPAcademia() {
         <div className="flex items-center">
           <div className="text-4xl md:text-5xl font-serif font-extrabold leading-none tracking-tight">
             <span className="bg-gradient-to-r from-[#c79a9a] via-[#7a5a5a] to-[#000000] bg-clip-text text-transparent">
-              FEMMup⭡
+<img
+  src="/logo-femmup.png"
+  alt="FEMMUP logo"
+  className="h-12 md:h-14 w-auto object-contain"
+/>
             </span>
           </div>
         </div>
