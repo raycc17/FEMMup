@@ -71,7 +71,11 @@ export default function FEMMUPAcademia() {
 
                   <h1 className="leading-none text-white">
                     <span className="block text-[90px] md:text-[120px] font-serif font-extrabold leading-none -tight">
-                      FEMMup↑
+<img
+  src="/logo-femmup.png"
+  alt="FEMMUP logo"
+  className="h-12 md:h-14 w-auto object-contain"
+/>
                     </span>
                   </h1>
                 </div>
