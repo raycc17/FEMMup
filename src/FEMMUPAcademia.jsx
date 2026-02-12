@@ -61,7 +61,7 @@ export default function FEMMUPAcademia() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           {/* HERO BANNER */}
           <section className="mb-20 rounded-3xl overflow-hidden shadow-2xl">
-            <div className="bg-gradient-to-r from-[#b98a8a] via-[#8b5e5e] to-[#140c0f] px-14 py-28">
+            <div className="bg-gradient-to-r from-[#b98a8a] via-[#8b5e5e] to-[#140c0f] px-10 py-20">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* LEFT SIDE */}
 <div className="text-white">
