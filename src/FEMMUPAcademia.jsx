@@ -64,17 +64,20 @@ export default function FEMMUPAcademia() {
             <div className="bg-gradient-to-r from-[#b98a8a] via-[#8b5e5e] to-[#140c0f] px-14 py-28">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* LEFT SIDE */}
-                <div className="text-white">
-                  <p className="uppercase tracking-[0.4em] text-sm mb-6 opacity-70 font-light">
-                    EDUCACIÓN
-                  </p>
-<img
-  src="/logo-femmup.png"
-  alt="FEMMUP logo"
-  className="h-12 md:h-14 w-auto object-contain"
-/>
-                  </h1>
-                </div>
+<div className="text-white">
+  <p className="uppercase tracking-[0.4em] text-sm mb-6 opacity-70 font-light">
+    EDUCACIÓN
+  </p>
+
+  <h1 className="leading-none text-white">
+    <img
+      src="/logo-femmup.png"
+      alt="FEMMUP logo"
+      className="h-16 md:h-24 w-auto object-contain"
+    />
+  </h1>
+</div>
+
 
                 {/* RIGHT SIDE */}
                 <div className="text-white md:text-right">
