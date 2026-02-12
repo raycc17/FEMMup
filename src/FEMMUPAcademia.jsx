@@ -71,8 +71,8 @@ export default function FEMMUPAcademia() {
 
   <h1 className="leading-none text-white">
     <img
-      src="/logo-femmup.png"
-      alt="FEMMUP logo"
+      src="/logo-femmup.png."
+      alt="/logo-femmup.png."
       className="h-16 md:h-24 w-auto object-contain"
     />
   </h1>
