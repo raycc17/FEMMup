@@ -66,11 +66,8 @@ export default function FEMMUPAcademia() {
                   </p>
 
                   <h1 className="leading-none text-white">
-                    <span className="block text-[90px] md:text-[120px] font-serif font-light tracking-tight">
-                      FEMM
-                    </span>
-                    <span className="block text-[70px] md:text-[95px] font-serif font-extralight -mt-4 ml-2">
-                      UP↑
+                    <span className="block text-[90px] md:text-[120px] font-serif font-extrabold leading-none -tight">
+                      FEMMup↑
                     </span>
                   </h1>
                 </div>
