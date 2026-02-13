@@ -23,7 +23,6 @@ export default function FEMMUPAcademia() {
     src="headerlogo.png"
     alt="headerlogo.png"
 className="h-70 md:h-86 w-auto object-contain"
-  />
 </div>
         </div>
         <div className="space-x-3">
