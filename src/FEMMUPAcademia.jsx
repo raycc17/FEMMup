@@ -40,7 +40,7 @@ export default function FEMMUPAcademia() {
           </Button>
           <Button
             onClick={() => setView("dashboard")}
-            className="group rounded-full px-8 py-2 bg-black hover:bg-black active:bg-black tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300"
+  className="group rounded-full px-8 py-2 !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
           >
             <span className="text-white font-semibold">Campus</span>
           </Button>
@@ -81,7 +81,7 @@ export default function FEMMUPAcademia() {
                       onClick={() => {
                         setView("apply");
                       }}
-                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-black active:bg-black hover:scale-105 active:scale-105"
+className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
                     >
                       <span className="font-semibold text-white">
                         Postular
