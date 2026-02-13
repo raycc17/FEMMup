@@ -68,8 +68,8 @@ export default function FEMMUPAcademia() {
 
                 <div className="flex items-center">
   <img
-    src="logobanner"
-    alt="logobanner"
+    src="logobanner.png"
+    alt="logobanner.png"
 className="h-64 md:h-80 w-auto object-contain"
   />
 </div>
