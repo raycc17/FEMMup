@@ -86,7 +86,7 @@ export default function FEMMUPAcademia() {
                       onClick={() => {
                         setView("apply");
                       }}
-className="group h-9 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
+className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
                     >
                      <span className="font-semibold bg-gradient-to-br from-[#e9e2e1] to-[#c68181] bg-clip-text text-transparent">
   Postular ahora
