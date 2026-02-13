@@ -81,7 +81,7 @@ export default function FEMMUPAcademia() {
                       onClick={() => {
                         setView("apply");
                       }}
-                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
+                      className="group rounded-6xl px-8 py-2 text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
                     >
                       <span className="font-semibold text-white">
                         Postular
