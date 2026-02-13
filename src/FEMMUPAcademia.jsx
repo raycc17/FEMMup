@@ -19,11 +19,12 @@ export default function FEMMUPAcademia() {
     <div className="min-h-screen bg-white text-gray-800 p-6">
       <header className="flex justify-between items-center mb-10">
         <div className="flex items-center">
-          <div className="text-4xl md:text-5xl font-serif font-extrabold leading-none tracking-tight">
-            <span className="bg-gradient-to-r from-[#c79a9a] via-[#7a5a5a] to-[#000000] bg-clip-text text-transparent">
-              FEMM
-            </span>
-          </div>
+  <img
+    src="headerlogo.png"
+    alt="headerlogo.png"
+className="h-70 md:h-86 w-auto object-contain"
+  />
+</div>
         </div>
         <div className="space-x-3">
           <Button
