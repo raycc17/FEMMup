@@ -34,7 +34,14 @@ export default function FEMMUPAcademia() {
     Inicio
   </span>
 </Button>
-
+<Button
+  onClick={() => setView("courses")}
+  className="group !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
+>
+  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
+    Programa
+  </span>
+</Button>
 <Button
   onClick={() => setView("courses")}
   className="group !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
