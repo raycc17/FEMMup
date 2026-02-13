@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 export default function FEMMUPAcademia() {
   const [view, setView] = useState("home");
   const [progress] = useState(35);
-  const [activeApply, setActiveApply] = useState(false);
 
   const courses = [
     { title: "Ecommerce Estratégico", modules: 6 },
@@ -18,46 +17,39 @@ export default function FEMMUPAcademia() {
   return (
     <div className="min-h-screen bg-white text-gray-800 p-6">
       <header className="flex justify-between items-center mb-10">
-<div className="flex items-center h-14 md:h-16 overflow-visible">
-  <img
-    src="/headerlogo.png"
-    alt="headerlogo.png"
-    className="h-full w-auto object-contain origin-left scale-200"
-  />
-</div>
-
+        <div className="flex items-center h-14 md:h-16 overflow-visible">
+          <img
+            src="/headerlogo.png"
+            alt="FEMMUP logo"
+            className="h-full w-auto object-contain origin-left scale-200"
+          />
         </div>
+
         <div className="space-x-3">
           <Button
             onClick={() => setView("home")}
             className="group bg-[#e9e1e1] hover:bg-gradient-to-br hover:from-[#e9e1e1] hover:to-[#d19898] rounded-full px-6 py-2 transition-all duration-300"
           >
-            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium transition-all duration-300 group-hover:from-[#000000] group-hover:to-[#d19898]">
-              Inicio
-            </span>
+            <span className="text-black font-medium">Inicio</span>
           </Button>
           <Button
             onClick={() => setView("courses")}
             className="group bg-[#e9e1e1] hover:bg-gradient-to-br hover:from-[#e9e1e1] hover:to-[#d19898] rounded-full px-6 py-2 transition-all duration-300"
           >
-            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium transition-all duration-300 group-hover:from-[#000000] group-hover:to-[#d19898]">
-              Programa
-            </span>
+            <span className="text-black font-medium">Programa</span>
           </Button>
           <Button
             onClick={() => setView("dashboard")}
             className="group rounded-full px-8 py-2 bg-black hover:bg-[#e9e1e1] tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300"
           >
-            <span className="bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent font-semibold transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-[#000000] group-hover:to-[#d19898] group-hover:bg-clip-text group-hover:text-transparent">
-              Campus
-            </span>
+            <span className="text-white font-semibold group-hover:text-black">Campus</span>
           </Button>
         </div>
       </header>
 
       {/* HOME VIEW */}
       {view === "home" && (
-        <motion.div initial={false} animate={{ opacity: 1 }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           {/* HERO BANNER */}
           <section className="mb-20 rounded-3xl overflow-hidden shadow-2xl">
             <div className="bg-gradient-to-r from-[#b98a8a] via-[#8b5e5e] to-[#140c0f] px-14 py-28">
@@ -68,14 +60,13 @@ export default function FEMMUPAcademia() {
                     EDUCACIÓN
                   </p>
 
-                <div className="flex items-center">
-  <img
-    src="logobanner.png"
-    alt="logobanner.png"
-className="h-70 md:h-86 w-auto object-contain"
-  />
-</div>
-
+                  <div className="flex items-center">
+                    <img
+                      src="/logobanner.png"
+                      alt="FEMMUP banner logo"
+                      className="h-20 md:h-28 w-auto object-contain"
+                    />
+                  </div>
                 </div>
 
                 {/* RIGHT SIDE */}
@@ -92,9 +83,7 @@ className="h-70 md:h-86 w-auto object-contain"
                       }}
                       className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-[#e9e1e1] active:bg-[#e9e1e1]"
                     >
-                      <span
-                        className="font-semibold bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#000000] group-hover:to-[#d19898]"
-                      >
+                      <span className="font-semibold text-white group-hover:text-black">
                         Postular
                       </span>
                     </Button>
@@ -116,9 +105,7 @@ className="h-70 md:h-86 w-auto object-contain"
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="rounded-2xl shadow-md">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">
-                    Formación Estratégica
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-3">Formación Estratégica</h3>
                   <p className="text-gray-600">
                     Programas diseñados para aplicar, no solo aprender teoría.
                   </p>
@@ -136,9 +123,7 @@ className="h-70 md:h-86 w-auto object-contain"
 
               <Card className="rounded-2xl shadow-md">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">
-                    Comunidad Elevada
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-3">Comunidad Elevada</h3>
                   <p className="text-gray-600">
                     Mujeres que crecen juntas con ética y visión empresarial.
                   </p>
@@ -157,9 +142,7 @@ className="h-70 md:h-86 w-auto object-contain"
             {courses.map((course, index) => (
               <Card key={index} className="rounded-2xl shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {course.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
                   <p className="mb-4">{course.modules} módulos</p>
                   <Button className="w-full">Ver detalles</Button>
                 </CardContent>
@@ -228,9 +211,7 @@ className="h-70 md:h-86 w-auto object-contain"
                 type="submit"
                 className="w-full mt-6 py-4 bg-black rounded-2xl"
               >
-                <span className="bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent font-semibold tracking-wide">
-                  ENVIAR
-                </span>
+                <span className="text-white font-semibold tracking-wide">ENVIAR</span>
               </Button>
             </form>
           </div>
@@ -243,9 +224,7 @@ className="h-70 md:h-86 w-auto object-contain"
           <h2 className="text-3xl font-semibold mb-6">Mi Campus</h2>
           <Card className="rounded-2xl shadow-lg mb-6">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">
-                Progreso General
-              </h3>
+              <h3 className="text-xl font-semibold mb-4">Progreso General</h3>
               <Progress value={progress} className="mb-2" />
               <p>{progress}% completado</p>
             </CardContent>
@@ -254,9 +233,7 @@ className="h-70 md:h-86 w-auto object-contain"
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="rounded-2xl shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">
-                  Próximas Tareas
-                </h3>
+                <h3 className="text-xl font-semibold mb-4">Próximas Tareas</h3>
                 <ul className="list-disc list-inside space-y-2">
                   <li>Subir práctica de branding</li>
                   <li>Responder evaluación módulo 2</li>
@@ -267,9 +244,7 @@ className="h-70 md:h-86 w-auto object-contain"
 
             <Card className="rounded-2xl shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">
-                  Certificación
-                </h3>
+                <h3 className="text-xl font-semibold mb-4">Certificación</h3>
                 <p>
                   Completa todos los módulos para desbloquear tu certificado
                   oficial FEMM-UP.
