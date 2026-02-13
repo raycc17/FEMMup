@@ -17,7 +17,7 @@ export default function FEMMUPAcademia() {
   return (
     <div className="min-h-screen bg-white text-gray-800 p-6">
       <header className="flex justify-between items-center mb-10">
-        <div className="flex items-center h-14 md:h-16 overflow-visible">
+        <div className="flex items-center h-10 md:h-12 overflow-visible">
           <img
             src="/headerlogo.png"
             alt="FEMMUP logo"
