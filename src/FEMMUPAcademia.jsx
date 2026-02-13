@@ -26,19 +26,20 @@ export default function FEMMUPAcademia() {
         </div>
 
         <div className="space-x-3">
-          <Button
+<Button
   onClick={() => setView("home")}
-  className="group bg-[#e9e1e1] hover:bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
+  className="group !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
 >
-  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:bg-gradient-to-br group-hover:from-[#d19898] group-hover:to-[#000000]">
+  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
     Inicio
   </span>
 </Button>
- <Button
+
+<Button
   onClick={() => setView("courses")}
-  className="group bg-[#e9e1e1] hover:bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
+  className="group !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
 >
-  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:bg-gradient-to-br group-hover:from-[#d19898] group-hover:to-[#000000]">
+  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
     Programa
   </span>
 </Button>
