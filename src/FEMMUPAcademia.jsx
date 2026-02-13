@@ -80,7 +80,6 @@ export default function FEMMUPAcademia() {
                   <p className="uppercase text-lg md:text-2xl tracking-wide font-extralight leading-relaxed max-w-md ml-auto">
                     Porque la educación y negocios ya están al alcance de todos
                   </p>
-
                   <div className="mt-10">
                     <Button
                       size="lg"
