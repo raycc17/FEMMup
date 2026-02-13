@@ -70,7 +70,7 @@ export default function FEMMUPAcademia() {
   <img
     src="logobanner.png"
     alt="logobanner.png"
-className="h-64 md:h-80 w-auto object-contain"
+className="h-70 md:h-86 w-auto object-contain"
   />
 </div>
 
