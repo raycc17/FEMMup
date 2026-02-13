@@ -18,12 +18,14 @@ export default function FEMMUPAcademia() {
   return (
     <div className="min-h-screen bg-white text-gray-800 p-6">
       <header className="flex justify-between items-center mb-10">
-        <div className="flex items-center">
+<div className="flex items-center h-14 md:h-16 overflow-visible">
   <img
-    src="headerlogo.png"
+    src="/headerlogo.png"
     alt="headerlogo.png"
-className="h-70 md:h-86 w-auto object-contain"
+    className="h-full w-auto object-contain origin-left scale-200"
+  />
 </div>
+
         </div>
         <div className="space-x-3">
           <Button
