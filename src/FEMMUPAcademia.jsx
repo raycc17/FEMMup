@@ -68,8 +68,8 @@ export default function FEMMUPAcademia() {
 
                   <div className="h-40 md:h-56 flex items-center">
                     <img
-                      src="/logo-femmup.png"
-                      alt="/logo-femmup.png"
+                      src="/logo-femmup.png."
+                      alt="/logo-femmup.png."
                       className="h-32 md:h-48 w-auto object-contain"
                     />
                   </div>
