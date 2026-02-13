@@ -28,7 +28,7 @@ export default function FEMMUPAcademia() {
         <div className="space-x-3">
 <Button
   onClick={() => setView("home")}
-  className="group h-12 min-w-[120px] px-6 py-2 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
+  className="group h-12 min-w-[120px] px-6 py-1 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
 >
   <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
     Inicio
