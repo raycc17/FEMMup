@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 export default function FEMMUPAcademia() {
   const [view, setView] = useState("home");
   const [progress] = useState(35);
+  const [activeApply, setActiveApply] = useState(false);
 
   const courses = [
     { title: "Ecommerce Estratégico", modules: 6 },
@@ -20,11 +21,7 @@ export default function FEMMUPAcademia() {
         <div className="flex items-center">
           <div className="text-4xl md:text-5xl font-serif font-extrabold leading-none tracking-tight">
             <span className="bg-gradient-to-r from-[#c79a9a] via-[#7a5a5a] to-[#000000] bg-clip-text text-transparent">
-<img
-  src="logo-femmup.png."
-  alt="logo-femmup.png."
-  className="h-12 md:h-14 w-auto object-contain"
-/>
+              FEMM
             </span>
           </div>
         </div>
@@ -58,25 +55,25 @@ export default function FEMMUPAcademia() {
 
       {/* HOME VIEW */}
       {view === "home" && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div initial={false} animate={{ opacity: 1 }}>
           {/* HERO BANNER */}
           <section className="mb-20 rounded-3xl overflow-hidden shadow-2xl">
-            <div className="bg-gradient-to-r from-[#b98a8a] via-[#8b5e5e] to-[#140c0f] px-10 py-20">
+            <div className="bg-gradient-to-r from-[#b98a8a] via-[#8b5e5e] to-[#140c0f] px-14 py-28">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* LEFT SIDE */}
-<div className="text-white">
-  <p className="uppercase tracking-[0.4em] text-sm mb-6 opacity-70 font-light">
-    EDUCACIÓN
-  </p>
-<div className="h-14 md:h-16 flex items-center">
-  <img
-    src="/logo-femmup.png."
-    alt="/logo-femmup.png."
-    className="h-full w-auto object-contain"
-  />
+                <div className="text-white">
+                  <p className="uppercase tracking-[0.4em] text-sm mb-6 opacity-70 font-light">
+                    EDUCACIÓN
+                  </p>
 
-</div>
-
+                  <div className="h-40 md:h-56 flex items-center">
+                    <img
+                      src="/logo-femmup.png"
+                      alt="FEMMUP Logo"
+                      className="h-32 md:h-48 w-auto object-contain"
+                    />
+                  </div>
+                </div>
 
                 {/* RIGHT SIDE */}
                 <div className="text-white md:text-right">
@@ -92,7 +89,9 @@ export default function FEMMUPAcademia() {
                       }}
                       className="group rounded-2xl px-10 py-6 text-base transition-all duration-300 bg-black hover:bg-[#e9e1e1] active:bg-[#e9e1e1]"
                     >
-                      <span className="font-semibold bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#000000] group-hover:to-[#d19898]">
+                      <span
+                        className="font-semibold bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#000000] group-hover:to-[#d19898]"
+                      >
                         Postular
                       </span>
                     </Button>
@@ -114,7 +113,9 @@ export default function FEMMUPAcademia() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="rounded-2xl shadow-md">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Formación Estratégica</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Formación Estratégica
+                  </h3>
                   <p className="text-gray-600">
                     Programas diseñados para aplicar, no solo aprender teoría.
                   </p>
@@ -132,7 +133,9 @@ export default function FEMMUPAcademia() {
 
               <Card className="rounded-2xl shadow-md">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">Comunidad Elevada</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    Comunidad Elevada
+                  </h3>
                   <p className="text-gray-600">
                     Mujeres que crecen juntas con ética y visión empresarial.
                   </p>
@@ -151,7 +154,9 @@ export default function FEMMUPAcademia() {
             {courses.map((course, index) => (
               <Card key={index} className="rounded-2xl shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {course.title}
+                  </h3>
                   <p className="mb-4">{course.modules} módulos</p>
                   <Button className="w-full">Ver detalles</Button>
                 </CardContent>
@@ -216,7 +221,10 @@ export default function FEMMUPAcademia() {
                 </div>
               ))}
 
-              <Button type="submit" className="w-full mt-6 py-4 bg-black rounded-2xl">
+              <Button
+                type="submit"
+                className="w-full mt-6 py-4 bg-black rounded-2xl"
+              >
                 <span className="bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent font-semibold tracking-wide">
                   ENVIAR
                 </span>
@@ -232,7 +240,9 @@ export default function FEMMUPAcademia() {
           <h2 className="text-3xl font-semibold mb-6">Mi Campus</h2>
           <Card className="rounded-2xl shadow-lg mb-6">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Progreso General</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Progreso General
+              </h3>
               <Progress value={progress} className="mb-2" />
               <p>{progress}% completado</p>
             </CardContent>
@@ -241,7 +251,9 @@ export default function FEMMUPAcademia() {
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="rounded-2xl shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Próximas Tareas</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Próximas Tareas
+                </h3>
                 <ul className="list-disc list-inside space-y-2">
                   <li>Subir práctica de branding</li>
                   <li>Responder evaluación módulo 2</li>
@@ -252,10 +264,12 @@ export default function FEMMUPAcademia() {
 
             <Card className="rounded-2xl shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Certificación</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Certificación
+                </h3>
                 <p>
-                  Completa todos los módulos para desbloquear tu certificado oficial
-                  FEMM-UP.
+                  Completa todos los módulos para desbloquear tu certificado
+                  oficial FEMM-UP.
                 </p>
                 <Button className="mt-4 w-full" variant="outline">
                   Ver Requisitos
