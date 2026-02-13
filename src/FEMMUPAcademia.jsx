@@ -17,7 +17,7 @@ export default function FEMMUPAcademia() {
   return (
     <div className="min-h-screen bg-white text-gray-800 p-6">
       <header className="flex justify-between items-center mb-10">
-        <div className="flex items-center h-10 md:h-12 overflow-visible">
+        <div className="flex items-center h-14 md:h-16 overflow-visible">
           <img
             src="/headerlogo.png"
             alt="FEMMUP logo"
@@ -40,9 +40,9 @@ export default function FEMMUPAcademia() {
           </Button>
           <Button
             onClick={() => setView("dashboard")}
-            className="group rounded-full px-8 py-2 bg-black hover:bg-[#e9e1e1] tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300"
+            className="group rounded-full px-8 py-2 bg-black hover:bg-black active:bg-black tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300"
           >
-            <span className="text-white font-semibold group-hover:text-black">Campus</span>
+            <span className="text-white font-semibold">Campus</span>
           </Button>
         </div>
       </header>
@@ -81,9 +81,9 @@ export default function FEMMUPAcademia() {
                       onClick={() => {
                         setView("apply");
                       }}
-                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-[#e9e1e1] active:bg-[#e9e1e1]"
+                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-black active:bg-black"
                     >
-                      <span className="font-semibold text-white group-hover:text-black">
+                      <span className="font-semibold text-white">
                         Postular
                       </span>
                     </Button>
