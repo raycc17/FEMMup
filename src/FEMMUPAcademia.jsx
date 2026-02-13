@@ -66,13 +66,14 @@ export default function FEMMUPAcademia() {
                     EDUCACIÓN
                   </p>
 
-                  <div className="h-40 md:h-56 flex items-center">
-                    <img
-                      src="/logo-femmup.png."
-                      alt="/logo-femmup.png."
-                      className="h-40 md:h-56 w-auto object-contain"
-                    />
-                  </div>
+                <div className="flex items-center">
+  <img
+    src="/logo-femmup.png."
+    alt="/logo-femmup.png."
+    className="h-56 md:h-72 w-auto object-contain"
+  />
+</div>
+
                 </div>
 
                 {/* RIGHT SIDE */}
