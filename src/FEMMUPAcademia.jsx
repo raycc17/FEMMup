@@ -28,7 +28,7 @@ export default function FEMMUPAcademia() {
         <div className="space-x-3">
 <Button
   onClick={() => setView("home")}
-  className="group h-12 min-w-[100px] px-6 py-1 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
+  className="group h-9 min-w-[100px] px-6 py-1 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
 >
   <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
     Inicio
@@ -36,7 +36,7 @@ export default function FEMMUPAcademia() {
 </Button>
 <Button
   onClick={() => setView("courses")}
-  className="group h-10 min-w-[100px] px-6 py-2 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
+  className="group h-9 min-w-[100px] px-6 py-2 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
 >
   <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
     Programa
@@ -44,7 +44,7 @@ export default function FEMMUPAcademia() {
 </Button>
           <Button
             onClick={() => setView("dashboard")}
-  className="group h-12 min-w-[130px] px-7 py-2 !rounded-full !border-0  !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
+  className="group h-10 min-w-[130px] px-7 py-2 !rounded-full !border-0  !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
           >
           <span className="bg-gradient-to-br from-[#e9e2e1] to-[#c68181] bg-clip-text text-transparent font-semibold">
   Campus
@@ -87,7 +87,7 @@ export default function FEMMUPAcademia() {
                       onClick={() => {
                         setView("apply");
                       }}
-className="group h-12 min-w-[120px] px-6 py-2 !rounded-full !border-0  text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
+className="group h-9 min-w-[120px] px-6 py-2 !rounded-full !border-0  text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
                     >
                      <span className="font-semibold bg-gradient-to-br from-[#e9e2e1] to-[#c68181] bg-clip-text text-transparent">
   Postular ahora
