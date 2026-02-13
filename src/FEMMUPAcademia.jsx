@@ -27,17 +27,21 @@ export default function FEMMUPAcademia() {
 
         <div className="space-x-3">
           <Button
-            onClick={() => setView("home")}
-            className="group bg-[#e9e1e1] hover:bg-gradient-to-br hover:from-[#e9e1e1] hover:to-[#d19898] rounded-full px-6 py-2 transition-all duration-300"
-          >
-            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium">Inicio</span>
-          </Button>
-          <Button
-            onClick={() => setView("courses")}
-            className="group bg-[#e9e1e1] hover:bg-gradient-to-br hover:from-[#e9e1e1] hover:to-[#d19898] rounded-full px-6 py-2 transition-all duration-300"
-          >
-            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium">Programa</span>
-          </Button>
+  onClick={() => setView("home")}
+  className="group bg-[#e9e1e1] hover:bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
+>
+  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:bg-gradient-to-br group-hover:from-[#d19898] group-hover:to-[#000000]">
+    Inicio
+  </span>
+</Button>
+ <Button
+  onClick={() => setView("courses")}
+  className="group bg-[#e9e1e1] hover:bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
+>
+  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:bg-gradient-to-br group-hover:from-[#d19898] group-hover:to-[#000000]">
+    Programa
+  </span>
+</Button>
           <Button
             onClick={() => setView("dashboard")}
   className="group rounded-full px-8 py-2 !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
