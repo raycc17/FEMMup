@@ -88,7 +88,7 @@ className="h-70 md:h-86 w-auto object-contain"
                       onClick={() => {
                         setView("apply");
                       }}
-                      className="group rounded-2xl px-10 py-6 text-base transition-all duration-300 bg-black hover:bg-[#e9e1e1] active:bg-[#e9e1e1]"
+                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-[#e9e1e1] active:bg-[#e9e1e1]"
                     >
                       <span
                         className="font-semibold bg-gradient-to-br from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#000000] group-hover:to-[#d19898]"
