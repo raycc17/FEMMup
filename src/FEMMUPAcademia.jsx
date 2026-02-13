@@ -30,17 +30,17 @@ export default function FEMMUPAcademia() {
             onClick={() => setView("home")}
             className="group bg-[#e9e1e1] hover:bg-gradient-to-br hover:from-[#e9e1e1] hover:to-[#d19898] rounded-full px-6 py-2 transition-all duration-300"
           >
-            <span className="text-black font-medium">Inicio</span>
+            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium">Inicio</span>
           </Button>
           <Button
             onClick={() => setView("courses")}
             className="group bg-[#e9e1e1] hover:bg-gradient-to-br hover:from-[#e9e1e1] hover:to-[#d19898] rounded-full px-6 py-2 transition-all duration-300"
           >
-            <span className="text-black font-medium">Programa</span>
+            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium">Programa</span>
           </Button>
           <Button
             onClick={() => setView("dashboard")}
-          className="group rounded-full px-8 py-2 !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
+            className="group rounded-full px-8 py-2 bg-black hover:bg-black active:bg-black tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300"
           >
             <span className="text-white font-semibold">Campus</span>
           </Button>
@@ -81,7 +81,7 @@ export default function FEMMUPAcademia() {
                       onClick={() => {
                         setView("apply");
                       }}
-                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
+                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-black active:bg-black hover:scale-105 active:scale-105"
                     >
                       <span className="font-semibold text-white">
                         Postular
