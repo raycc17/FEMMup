@@ -241,7 +241,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 <img
   src="/logocampus.png"
   alt="FEMMUP"
-  className="h-25 md:h-29 w-auto mx-auto object-contain"
+  className="h-23 md:h-27 w-auto mx-auto object-contain"
 />
     </div>
 
