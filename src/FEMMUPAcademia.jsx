@@ -233,56 +233,57 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    className="fixed inset-0 flex flex-col items-center justify-start pt-32 px-6 bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
+    className="min-h-screen flex flex-col items-center justify-start py-20 px-6 overflow-y-auto bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
   >
     {/* Logo */}
-    <div className="mb-28 text-center">
-      <h1 className="text-6xl md:text-7xl font-light tracking-wide">
+    <div className="mb-16 text-center">
+      <h1 className="text-4xl md:text-5xl font-light tracking-wide">
         <span className="bg-gradient-to-r from-[#e9e1e1] via-[#d19898] to-black bg-clip-text text-transparent">
           FEMM
         </span>
         <span className="text-black">UP↑</span>
       </h1>
 
-      <div className="mt-5 inline-block px-10 py-2 rounded-full bg-gradient-to-r from-black to-[#d19898]">
-        <span className="text-white tracking-[0.3em] text-sm">
+      <div className="mt-4 inline-block px-8 py-2 rounded-full bg-gradient-to-r from-black to-[#d19898]">
+        <span className="text-white tracking-[0.3em] text-xs">
           CAMPUS
         </span>
       </div>
     </div>
+
     {/* Form */}
-    <div className="w-full max-w-md space-y-12">
-      <h2 className="text-5xl font-light text-white leading-tight">
+    <div className="w-full max-w-md space-y-10">
+      <h2 className="text-3xl md:text-4xl font-light text-white leading-tight">
         INGRESA A <br /> TU CAMPUS
       </h2>
 
-      <div className="space-y-10">
+      <div className="space-y-8">
         <div>
-          <label className="block text-white text-lg mb-4">
+          <label className="block text-white text-base mb-3">
             usuario:
           </label>
           <input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full h-16 rounded-full px-8 bg-white/25 backdrop-blur-md text-white focus:outline-none"
+            className="w-full h-14 rounded-full px-6 bg-white/20 backdrop-blur-md text-white focus:outline-none"
           />
         </div>
 
         <div>
-          <label className="block text-white text-lg mb-4">
+          <label className="block text-white text-base mb-3">
             contraseña:
           </label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full h-16 rounded-full px-8 bg-white/25 backdrop-blur-md text-white focus:outline-none"
+            className="w-full h-14 rounded-full px-6 bg-white/20 backdrop-blur-md text-white focus:outline-none"
           />
         </div>
       </div>
 
-      <button className="w-full h-16 rounded-full bg-gradient-to-r from-black to-[#d19898] text-white text-xl tracking-wide hover:opacity-90 transition-all">
+      <button className="w-full h-14 rounded-full bg-gradient-to-r from-black to-[#d19898] text-white text-lg tracking-wide hover:opacity-90 transition-all">
         ingresar
       </button>
     </div>
