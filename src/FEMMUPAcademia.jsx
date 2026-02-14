@@ -241,14 +241,8 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 <img
   src="/logocampus.png"
   alt="FEMMUP"
-  className="h-16 md:h-20 w-auto mx-auto object-contain"
+  className="h-20 md:h-24 w-auto mx-auto object-contain"
 />
-
-      <div className="mt-4 inline-block px-8 py-2 rounded-full bg-gradient-to-r from-black to-[#d19898]">
-        <span className="text-white tracking-[0.3em] text-xs">
-          CAMPUS
-        </span>
-      </div>
     </div>
 
     {/* Form */}
