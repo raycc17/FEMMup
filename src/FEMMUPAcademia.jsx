@@ -228,7 +228,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 {/* LOGIN VIEW */}
 {view !== "login" && (
   <header className="flex justify-between items-center mb-10">
-    {/* ...todo tu header actual sin tocar nada... */}
+    ...
   </header>
 )}
   <motion.div
