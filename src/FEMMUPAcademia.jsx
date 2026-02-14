@@ -236,12 +236,6 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
     className="min-h-screen flex flex-col items-center justify-start py-20 px-6 overflow-y-auto bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
   >
     {/* Back to Home */}
-<button
-  onClick={() => setView("home")}
-  className="absolute top-8 left-8 text-sm tracking-wider bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
->
-  ← Regresar a inicio
-</button>
     {/* Logo */}
     <div className="mb-16 text-center">
       <h1 className="text-4xl md:text-5xl font-light tracking-wide">
@@ -297,7 +291,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   onClick={() => setView("home")}
   className="w-full text-sm tracking-wide bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
 >
-  regresar a inicio
+  ← Inicio
 </button>
     </div>
   </motion.div>
