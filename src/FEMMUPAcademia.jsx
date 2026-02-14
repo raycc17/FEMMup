@@ -293,6 +293,12 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       <button className="w-full h-14 rounded-full bg-gradient-to-r from-black to-[#d19898] text-white text-lg tracking-wide hover:opacity-90 transition-all">
         ingresar
       </button>
+      <button
+  onClick={() => setView("home")}
+  className="w-full text-sm tracking-wide bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
+>
+  regresar a inicio
+</button>
     </div>
   </motion.div>
 )}
