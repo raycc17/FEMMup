@@ -17,7 +17,7 @@ const [password, setPassword] = useState("");
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 p-6">
+   <div className={view === "login" ? "min-h-[100dvh] text-gray-800" : "min-h-screen bg-white text-gray-800 p-6"}>
       <header className="flex justify-between items-center mb-10">
         <div className="flex items-center h-14 md:h-16 overflow-visible">
           <img
@@ -230,7 +230,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-   className="w-full min-h-[100dvh] flex flex-col items-center justify-start pt-24 px-6 bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
+className="w-full min-h-[100dvh] flex flex-col items-center justify-start pt-24 px-6 bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
   >
     {/* Logo */}
     <div className="mb-24 text-center">
