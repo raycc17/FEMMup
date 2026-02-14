@@ -5,8 +5,8 @@ import { Progress } from "@/components/ui/progress";
 import { motion } from "framer-motion";
 
 export default function FEMMUPAcademia() {
-  const [view, setView] = useState("home");
-  const [progress] = useState(35);
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
 
   const courses = [
     { title: "Ecommerce Estratégico", modules: 6 },
@@ -43,7 +43,7 @@ export default function FEMMUPAcademia() {
   </span>
 </Button>
           <Button
-            onClick={() => setView("dashboard")}
+onClick={() => setView("login")}
   className="group h-10 min-w-[130px] px-7 py-2 !rounded-full !border-0  !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
           >
           <span className="bg-gradient-to-br from-[#e9e2e1] to-[#c68181] bg-clip-text text-transparent font-semibold">
@@ -223,45 +223,63 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
         </motion.div>
       )}
 
-      {/* DASHBOARD VIEW */}
-      {view === "dashboard" && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <h2 className="text-3xl font-semibold mb-6">Mi Campus</h2>
-          <Card className="rounded-2xl shadow-lg mb-6">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Progreso General</h3>
-              <Progress value={progress} className="mb-2" />
-              <p>{progress}% completado</p>
-            </CardContent>
-          </Card>
+{/* LOGIN VIEW */}
+{view === "login" && (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className="min-h-screen flex flex-col items-center justify-start pt-24 px-6 bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
+  >
+    {/* Logo */}
+    <div className="mb-24 text-center">
+      <h1 className="text-6xl md:text-7xl font-serif font-light tracking-wide">
+        <span className="bg-gradient-to-r from-[#e9e1e1] via-[#d19898] to-black bg-clip-text text-transparent">
+          FEMM
+        </span>
+        <span className="text-black">UP↑</span>
+      </h1>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="rounded-2xl shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Próximas Tareas</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Subir práctica de branding</li>
-                  <li>Responder evaluación módulo 2</li>
-                </ul>
-                <Button className="mt-4 w-full">Subir Tarea</Button>
-              </CardContent>
-            </Card>
+      <div className="mt-4 inline-block px-8 py-2 rounded-full bg-gradient-to-r from-black to-[#d19898]">
+        <span className="text-white tracking-widest text-sm">
+          CAMPUS
+        </span>
+      </div>
+    </div>
 
-            <Card className="rounded-2xl shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">Certificación</h3>
-                <p>
-                  Completa todos los módulos para desbloquear tu certificado
-                  oficial FEMM-UP.
-                </p>
-                <Button className="mt-4 w-full" variant="outline">
-                  Ver Requisitos
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </motion.div>
-      )}
+    {/* Form */}
+    <div className="w-full max-w-md space-y-10">
+      <h2 className="text-4xl md:text-5xl font-light text-white leading-tight">
+        INGRESA A <br /> TU CAMPUS
+      </h2>
+
+      <div className="space-y-8">
+        <div>
+          <label className="block text-white text-lg mb-3">
+            usuario:
+          </label>
+          <input
+            type="text"
+            className="w-full h-14 rounded-full px-6 bg-white/30 backdrop-blur-sm text-white focus:outline-none"
+          />
+        </div>
+
+        <div>
+          <label className="block text-white text-lg mb-3">
+            contraseña:
+          </label>
+          <input
+            type="password"
+            className="w-full h-14 rounded-full px-6 bg-white/30 backdrop-blur-sm text-white focus:outline-none"
+          />
+        </div>
+      </div>
+
+      <button className="w-full h-14 rounded-full bg-gradient-to-r from-black to-[#d19898] text-white text-lg tracking-wide hover:opacity-90 transition-all">
+        ingresar
+      </button>
+    </div>
+  </motion.div>
+)}
     </div>
   );
 }
