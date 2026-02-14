@@ -17,7 +17,7 @@ const [password, setPassword] = useState("");
   ];
 
   return (
-   <div className={view === "login" ? "min-h-[100dvh] text-gray-800" : "min-h-screen bg-white text-gray-800 p-6"}>
+<div className={view === "login" ? "min-h-[100dvh] text-gray-800" : "min-h-screen bg-white text-gray-800 p-6"}>
       <header className="flex justify-between items-center mb-10">
         <div className="flex items-center h-14 md:h-16 overflow-visible">
           <img
@@ -226,7 +226,11 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       )}
 
 {/* LOGIN VIEW */}
-{view === "login" && (
+{view !== "login" && (
+  <header className="flex justify-between items-center mb-10">
+    {/* ...todo tu header actual sin tocar nada... */}
+  </header>
+)}
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
