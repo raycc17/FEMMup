@@ -5,6 +5,8 @@ import { Progress } from "@/components/ui/progress";
 import { motion } from "framer-motion";
 
 export default function FEMMUPAcademia() {
+const [view, setView] = useState("home");
+const [progress] = useState(35);
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 
