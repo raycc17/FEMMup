@@ -169,29 +169,41 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           animate={{ opacity: 1 }}
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
         >
-{/* Arrow Pattern Background */}
-<div className="absolute inset-0 grid grid-cols-8 gap-6 pointer-events-none text-6xl font-bold select-none">
-  {[...Array(80)].map((_, i) => (
+{[...Array(80)].map((_, i) => {
+  const isAnimated = i % 7 === 0;
+  const isCircledAnimated = i === 0 || i === 7;
+
+  return (
     <motion.div
       key={i}
-      initial={{ y: i % 7 === 0 ? "100vh" : 0 }}
-      animate={{ y: i % 7 === 0 ? "-100vh" : 0 }}
+      initial={{ y: isAnimated ? "100vh" : 0 }}
+      animate={{ y: isAnimated ? "-100vh" : 0 }}
       transition={{
         repeat: Infinity,
         duration: 6 + (i % 5),
         ease: "linear",
       }}
       className={
-        i % 7 === 0
-          ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-50"
-          : "text-[#e9e1e1] opacity-50"
+        isCircledAnimated
+          ? "flex items-center justify-center"
+          : isAnimated
+            ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30"
+            : "text-[#e9e1e1] opacity-50"
       }
     >
-      ↑
+      {isCircledAnimated ? (
+        <div className="w-14 h-14 rounded-full bg-[#e9e1e1]/50 flex items-center justify-center">
+          <span className="bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30">
+            ↑
+          </span>
+        </div>
+      ) : (
+        "↑"
+      )}
     </motion.div>
-  ))}
+  );
+})}
 </div>
-
 
           {/* Form Container */}
           <div className="relative z-10 w-full max-w-2xl p-10 rounded-3xl bg-gradient-to-br from-[#000000]/90 to-[#d19898]/90 backdrop-blur-md shadow-2xl">
