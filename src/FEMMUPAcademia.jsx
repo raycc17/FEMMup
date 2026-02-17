@@ -170,12 +170,12 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
         >
 {/* Arrow Pattern Background */}
-<div className="absolute inset-0 grid grid-cols-8 gap-6 opacity-50 pointer-events-none text-6xl font-bold select-none">
+<div className="absolute inset-0 grid grid-cols-8 gap-6 pointer-events-none text-6xl font-bold select-none">
   {[...Array(80)].map((_, i) => (
     <motion.div
       key={i}
-      initial={{ y: 0 }}
-      animate={{ y: i % 7 === 0 ? -200 : 0 }}
+      initial={{ y: i % 7 === 0 ? "100vh" : 0 }}
+      animate={{ y: i % 7 === 0 ? "-100vh" : 0 }}
       transition={{
         repeat: Infinity,
         duration: 6 + (i % 5),
@@ -183,14 +183,15 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       }}
       className={
         i % 7 === 0
-          ? "text-[#8f4f4f] drop-shadow-[0_0_14px_rgba(143,79,79,0.95)]"
-          : "text-[#c68181] drop-shadow-[0_0_8px_rgba(198,129,129,0.75)]"
+          ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-50"
+          : "text-[#e9e1e1]"
       }
     >
       ↑
     </motion.div>
   ))}
 </div>
+
 
           {/* Form Container */}
           <div className="relative z-10 w-full max-w-2xl p-10 rounded-3xl bg-gradient-to-br from-[#000000]/90 to-[#d19898]/90 backdrop-blur-md shadow-2xl">
