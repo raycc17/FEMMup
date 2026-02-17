@@ -190,8 +190,6 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   ))}
 </div>
 
-
-
           {/* Form Container */}
           <div className="relative z-10 w-full max-w-2xl p-10 rounded-3xl bg-gradient-to-br from-[#000000]/90 to-[#d19898]/90 backdrop-blur-md shadow-2xl">
             <h2 className="text-3xl text-white font-semibold mb-8 text-center">
