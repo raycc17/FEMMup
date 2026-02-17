@@ -170,7 +170,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
         >
           {/* Arrow Pattern Background */}
-          <div className="absolute inset-0 grid grid-cols-8 gap-8 opacity-60 pointer-events-none text-4xl font-light select-none">
+          <div className="absolute inset-0 grid grid-cols-8 gap-8 opacity-40 pointer-events-none text-4xl font-light select-none">
             {[...Array(80)].map((_, i) => (
               <motion.div
                 key={i}
