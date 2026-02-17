@@ -169,24 +169,28 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           animate={{ opacity: 1 }}
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
         >
-          {/* Arrow Pattern Background */}
-          <div className="absolute inset-0 grid grid-cols-8 gap-8 opacity-90 pointer-events-none text-4xl font-light select-none">
-            {[...Array(80)].map((_, i) => (
-              <motion.div
-                key={i}
-                initial={{ y: 0 }}
-                animate={{ y: i % 7 === 0 ? -200 : 0 }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 6 + (i % 5),
-                  ease: "linear",
-                }}
-                className={i % 7 === 0 ? "text-[#e9e1e1]" : "text-[#f9f7f7]"}
-              >
-                ↑
-              </motion.div>
-            ))}
-          </div>
+{/* Arrow Pattern Background */}
+<div className="absolute inset-0 grid grid-cols-8 gap-6 opacity-100 pointer-events-none text-6xl font-bold select-none">
+  {[...Array(80)].map((_, i) => (
+    <motion.div
+      key={i}
+      initial={{ y: 0 }}
+      animate={{ y: i % 7 === 0 ? -200 : 0 }}
+      transition={{
+        repeat: Infinity,
+        duration: 6 + (i % 5),
+        ease: "linear",
+      }}
+      className={
+        i % 7 === 0
+          ? "text-[#8f4f4f] drop-shadow-[0_0_14px_rgba(143,79,79,0.95)]"
+          : "text-[#c68181] drop-shadow-[0_0_8px_rgba(198,129,129,0.75)]"
+      }
+    >
+      ↑
+    </motion.div>
+  ))}
+</div>
 
           {/* Form Container */}
           <div className="relative z-10 w-full max-w-2xl p-10 rounded-3xl bg-gradient-to-br from-[#000000]/90 to-[#d19898]/90 backdrop-blur-md shadow-2xl">
