@@ -171,7 +171,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
         >
 {/* Arrow Pattern Background */}
 <div className="absolute inset-0 grid grid-cols-8 gap-6 pointer-events-none text-6xl font-bold select-none">
-  [...Array(80)].map((_, i) => {
+{[...Array(80)].map((_, i) => {
   const isAnimated = i % 7 === 0;
   const isCircledAnimated = i === 0 || i === 7;
 
@@ -205,6 +205,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
     </motion.div>
   );
 })}
+
 </div>
 
           {/* Form Container */}
