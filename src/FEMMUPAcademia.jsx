@@ -5,10 +5,8 @@ import { Progress } from "@/components/ui/progress";
 import { motion } from "framer-motion";
 
 export default function FEMMUPAcademia() {
-const [view, setView] = useState("home");
-const [progress] = useState(35);
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
+  const [view, setView] = useState("home");
+  const [progress] = useState(35);
 
   const courses = [
     { title: "Ecommerce Estratégico", modules: 6 },
@@ -17,11 +15,8 @@ const [password, setPassword] = useState("");
   ];
 
   return (
-<div className={view === "login"
-  ? "min-h-[100dvh]"
-  : "min-h-screen bg-white text-gray-800 p-6"}>
- {view !== "login" && (
-  <header className="flex justify-between items-center mb-10">
+    <div className="min-h-screen bg-white text-gray-800 p-6">
+      <header className="flex justify-between items-center mb-10">
         <div className="flex items-center h-14 md:h-16 overflow-visible">
           <img
             src="/headerlogo.png"
@@ -31,33 +26,27 @@ const [password, setPassword] = useState("");
         </div>
 
         <div className="space-x-3">
-<Button
-  onClick={() => setView("home")}
-  className="group h-9 min-w-[100px] px-6 py-1 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
->
-  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
-    Inicio
-  </span>
-</Button>
-<Button
-  onClick={() => setView("courses")}
-  className="group h-9 min-w-[100px] px-6 py-2 !rounded-full !border-0  !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] transition-all duration-300"
->
-  <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">
-    Programa
-  </span>
-</Button>
           <Button
-onClick={() => setView("login")}
-  className="group h-10 min-w-[130px] px-7 py-2 !rounded-full !border-0  !bg-black hover:!bg-black active:!bg-black text-white tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-0"
+            onClick={() => setView("home")}
+            className="group !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
           >
-          <span className="bg-gradient-to-br from-[#e9e2e1] to-[#c68181] bg-clip-text text-transparent font-semibold">
-  Campus
-</span>
+            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">Inicio</span>
+          </Button>
+          <Button
+            onClick={() => setView("courses")}
+            className="group !bg-[#e9e1e1] hover:!bg-[#e9e1e1] active:!bg-[#e9e1e1] rounded-full px-6 py-2 transition-all duration-300"
+          >
+            <span className="bg-gradient-to-br from-[#000000] to-[#d19898] bg-clip-text text-transparent font-medium group-hover:from-[#d19898] group-hover:to-[#000000]">Programa</span>
+          </Button>
+          <Button
+            onClick={() => setView("dashboard")}
+            className="group rounded-full px-8 py-2 bg-black hover:bg-black active:bg-black tracking-widest uppercase text-sm shadow-md hover:scale-105 transition-all duration-300"
+          >
+            <span className="text-white font-semibold">Campus</span>
           </Button>
         </div>
       </header>
-)}
+
       {/* HOME VIEW */}
       {view === "home" && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -75,7 +64,7 @@ onClick={() => setView("login")}
                     <img
                       src="/logobanner.png"
                       alt="FEMMUP banner logo"
-                      className="h-50 md:h-58 w-auto object-contain"
+                      className="h-20 md:h-28 w-auto object-contain"
                     />
                   </div>
                 </div>
@@ -85,17 +74,18 @@ onClick={() => setView("login")}
                   <p className="uppercase text-lg md:text-2xl tracking-wide font-extralight leading-relaxed max-w-md ml-auto">
                     Porque la educación y negocios ya están al alcance de todos
                   </p>
+
                   <div className="mt-10">
                     <Button
                       size="lg"
                       onClick={() => {
                         setView("apply");
                       }}
-className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base transition-all duration-300 !bg-black hover:!bg-black active:!bg-black text-white focus:outline-none focus:ring-0"
+                      className="group rounded-2xl px-8 py-2 text-base transition-all duration-300 bg-black hover:bg-black active:bg-black hover:scale-105 active:scale-105"
                     >
-                     <span className="font-semibold bg-gradient-to-br from-[#e9e2e1] to-[#c68181] bg-clip-text text-transparent">
-  Postular ahora
-</span>
+                      <span className="font-semibold text-white">
+                        Postular
+                      </span>
                     </Button>
                   </div>
                 </div>
@@ -170,7 +160,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
         >
           {/* Arrow Pattern Background */}
-          <div className="absolute inset-0 grid grid-cols-8 gap-8 opacity-90 pointer-events-none text-4xl font-light select-none">
+          <div className="absolute inset-0 grid grid-cols-8 gap-8 opacity-95 pointer-events-none text-5xl font-semibold select-none">
             {[...Array(80)].map((_, i) => (
               <motion.div
                 key={i}
@@ -181,7 +171,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
                   duration: 6 + (i % 5),
                   ease: "linear",
                 }}
-                className={i % 7 === 0 ? "text-[#e9e1e1]" : "text-[#f9f7f7]"}
+                className={i % 7 === 0 ? "text-[#b77272] drop-shadow-[0_0_10px_rgba(183,114,114,0.65)]" : "text-[#d9a6a6]"}
               >
                 ↑
               </motion.div>
@@ -228,67 +218,45 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
         </motion.div>
       )}
 
-{/* LOGIN VIEW */}
-{view === "login" && (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    className="min-h-screen flex flex-col items-center justify-start py-20 px-6 overflow-y-auto bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
-  >
-    {/* Back to Home */}
-    {/* Logo */}
-    <div className="mb-16 text-center">
-<img
-  src="/logocampus.png"
-  alt="FEMMUP"
-  className="h-20 md:h-24 w-auto mx-auto object-contain"
-/>
-    </div>
+      {/* DASHBOARD VIEW */}
+      {view === "dashboard" && (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <h2 className="text-3xl font-semibold mb-6">Mi Campus</h2>
+          <Card className="rounded-2xl shadow-lg mb-6">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-4">Progreso General</h3>
+              <Progress value={progress} className="mb-2" />
+              <p>{progress}% completado</p>
+            </CardContent>
+          </Card>
 
-    {/* Form */}
-    <div className="w-full max-w-md space-y-10">
-      <h2 className="text-3xl md:text-4xl font-light text-white leading-tight">
-        INGRESA A <br /> TU CAMPUS
-      </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="rounded-2xl shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Próximas Tareas</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Subir práctica de branding</li>
+                  <li>Responder evaluación módulo 2</li>
+                </ul>
+                <Button className="mt-4 w-full">Subir Tarea</Button>
+              </CardContent>
+            </Card>
 
-      <div className="space-y-8">
-        <div>
-          <label className="block text-white text-base mb-3">
-            usuario:
-          </label>
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full h-14 rounded-full px-6 bg-white/20 backdrop-blur-md text-white focus:outline-none"
-          />
-        </div>
-
-        <div>
-          <label className="block text-white text-base mb-3">
-            contraseña:
-          </label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full h-14 rounded-full px-6 bg-white/20 backdrop-blur-md text-white focus:outline-none"
-          />
-        </div>
-      </div>
-
-      <button className="w-full h-14 rounded-full bg-gradient-to-r from-black to-[#d19898] text-white text-lg tracking-wide hover:opacity-90 transition-all">
-        ingresar
-      </button>
-      <button
-  onClick={() => setView("home")}
-  className="w-full text-sm tracking-wide bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
->
-  ← Inicio
-</button>
-    </div>
-  </motion.div>
-)}
+            <Card className="rounded-2xl shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Certificación</h3>
+                <p>
+                  Completa todos los módulos para desbloquear tu certificado
+                  oficial FEMM-UP.
+                </p>
+                <Button className="mt-4 w-full" variant="outline">
+                  Ver Requisitos
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }
