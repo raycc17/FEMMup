@@ -194,7 +194,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
     )}
   </motion.div>
 ))}
-
+</div>
 
 
           {/* Form Container */}
