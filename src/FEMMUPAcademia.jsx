@@ -186,7 +186,6 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-50"
           : "text-[#e9e1e1]" 
     >
-      ↑
     </motion.div>
   ))}
 </div>
