@@ -181,7 +181,11 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       duration: 6 + (i % 5),
       ease: "linear",
     }}
-    className={i === 0 || i === 7 ? "flex items-center justify-center" : "text-[#e9e1e1] opacity-50"}
+    className={  i % 7 === 0
+    ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30"
+    : "text-[#e9e1e1] opacity-50"
+}
+
   >
     {i === 0 || i === 7 ? (
       <div className="w-12 h-12 rounded-full bg-[#e9e1e1] flex items-center justify-center">
