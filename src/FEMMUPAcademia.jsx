@@ -200,9 +200,9 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       >
         {isCircledAnimated ? (
           <div className="w-14 h-14 rounded-full bg-[#e9e1e1]/50 flex items-center justify-center">
-            <span className="bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30">
-              ↑
-            </span>
+       <span className="inline-block scale-75 bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30">
+  ↑
+</span>
           </div>
         ) : (
           "↑"
