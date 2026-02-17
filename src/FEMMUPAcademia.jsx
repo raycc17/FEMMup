@@ -171,34 +171,27 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
         >
 {/* Arrow Pattern Background */}
 <div className="absolute inset-0 grid grid-cols-8 gap-6 pointer-events-none text-6xl font-bold select-none">
-{[...Array(80)].map((_, i) => (
-  <motion.div
-    key={i}
-    initial={{ y: i === 0 || i === 7 ? "100vh" : 0 }}
-    animate={{ y: i === 0 || i === 7 ? "-100vh" : 0 }}
-    transition={{
-      repeat: Infinity,
-      duration: 6 + (i % 5),
-      ease: "linear",
-    }}
-    className={  i % 7 === 0
-    ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30"
-    : "text-[#e9e1e1] opacity-50"
-}
-
-  >
-    {i === 0 || i === 7 ? (
-      <div className="w-12 h-12 rounded-full bg-[#e9e1e1] flex items-center justify-center">
-        <span className="bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-30 text-4xl leading-none">
-          ↑
-        </span>
-      </div>
-    ) : (
-      "↑"
-    )}
-  </motion.div>
-))}
+  {[...Array(80)].map((_, i) => (
+    <motion.div
+      key={i}
+      initial={{ y: i % 7 === 0 ? "100vh" : 0 }}
+      animate={{ y: i % 7 === 0 ? "-100vh" : 0 }}
+      transition={{
+        repeat: Infinity,
+        duration: 6 + (i % 5),
+        ease: "linear",
+      }}
+      className={
+        i % 7 === 0
+          ? "bg-gradient-to-b from-[#e9e1e1] to-[#d49e9e] bg-clip-text text-transparent opacity-50"
+          : "text-[#e9e1e1]" : "w-12 h-12 rounded-full bg-[#e9e1e1] flex items-center justify-center">
+      }
+    >
+      ↑
+    </motion.div>
+  ))}
 </div>
+
 
 
           {/* Form Container */}
