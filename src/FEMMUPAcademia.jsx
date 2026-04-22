@@ -343,7 +343,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 )}
 
   {/* FOOTER */}
-<footer className="w-full text-center py-6 text-sm text-gray-400">
+<footer className="fixed bottom-0 left-0 w-full text-center py-4 text-xs text-gray-400 bg-transparent z-50">
   Ejecutado por la firma estratégica y creativa{" "}
   <a
     href="https://www.coronelco.lat"
@@ -361,7 +361,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
     className="font-normal hover:font-semibold transition-all"
   >
     Raysa Coronel
-  </a> 
+  </a>
 </footer>
   
     </div>
