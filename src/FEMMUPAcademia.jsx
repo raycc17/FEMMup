@@ -370,7 +370,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   initial={{ opacity: 0, y: 10 }}
   animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 10 }}
   transition={{ duration: 0.4 }}
-  className="fixed bottom-8 left-0 w-full text-center text-xs text-[#a8a1a1] z-50 pointer-events-none"
+  className="fixed bottom-3 left-0 w-full text-center text-xs text-[#a8a1a1] z-50 pointer-events-none"
 >
   <span className="pointer-events-auto">
     Ejecutado por la firma estratégica y creativa{" "}
