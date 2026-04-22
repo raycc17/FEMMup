@@ -13,22 +13,28 @@ const [showFooter, setShowFooter] = useState(false);
 
 useEffect(() => {
   const handleScroll = () => {
-    const scrollTop = window.scrollY;
+    const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
-    const docHeight = document.documentElement.scrollHeight;
+    const documentHeight = document.body.scrollHeight;
 
-    // Si estás cerca del final (100px antes)
-    if (scrollTop + windowHeight >= docHeight - 100) {
+    // 👇 Si la página es corta → mostrar siempre
+    if (documentHeight <= windowHeight + 50) {
+      setShowFooter(true);
+      return;
+    }
+
+    // 👇 Si hay scroll → mostrar solo al final
+    if (scrollPosition + windowHeight >= documentHeight - 80) {
       setShowFooter(true);
     } else {
       setShowFooter(false);
     }
   };
 
+  handleScroll(); // 👈 IMPORTANTE (para cargar bien al inicio)
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
-
 const courses = [
   { 
     title: "Ecommerce Estratégico", 
@@ -366,8 +372,10 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 20 }}
   transition={{ duration: 0.4 }}
-  className="fixed bottom-0 left-0 w-full text-center py-4 text-xs text-gray-400 bg-transparent z-50 pointer-events-none"
->
+className={`fixed bottom-2 left-1/2 -translate-x-1/2 text-xs text-gray-400 transition-all duration-700 ${
+  showFooter ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+}`}
+  >
   <span className="pointer-events-auto">
     Ejecutado por la firma estratégica y creativa{" "}
     <a
