@@ -311,20 +311,18 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 
 {/* LOGIN VIEW */}
 {view === "login" && (
-<motion.footer
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 20 }}
-  transition={{ duration: 0.4 }}
-  className="fixed bottom-6 left-1/2 -translate-x-1/2 text-center px-6 py-2 text-xs text-[#a8a1a1] bg-white/30 backdrop-blur-md rounded-full shadow-sm z-50 pointer-events-none"
->
-  {/* Back to Home */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className="min-h-screen flex flex-col items-center justify-start py-20 px-6 overflow-y-auto bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
+  >
     {/* Logo */}
     <div className="mb-16 text-center">
-<img
-  src="/logocampus.png"
-  alt="FEMMUP"
-  className="h-20 md:h-24 w-auto mx-auto object-contain"
-/>
+      <img
+        src="/logocampus.png"
+        alt="FEMMUP"
+        className="h-20 md:h-24 w-auto mx-auto object-contain"
+      />
     </div>
 
     {/* Form */}
@@ -335,9 +333,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 
       <div className="space-y-8">
         <div>
-          <label className="block text-white text-base mb-3">
-            usuario:
-          </label>
+          <label className="block text-white text-base mb-3">usuario:</label>
           <input
             type="text"
             value={email}
@@ -347,9 +343,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
         </div>
 
         <div>
-          <label className="block text-white text-base mb-3">
-            contraseña:
-          </label>
+          <label className="block text-white text-base mb-3">contraseña:</label>
           <input
             type="password"
             value={password}
@@ -362,16 +356,17 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       <button className="w-full h-14 rounded-full bg-gradient-to-r from-black to-[#d19898] text-white text-lg tracking-wide hover:opacity-90 transition-all">
         ingresar
       </button>
+
       <button
-  onClick={() => setView("home")}
-  className="w-full text-sm tracking-wide bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
->
-  ← Inicio
-</button>
+        onClick={() => setView("home")}
+        className="w-full text-sm tracking-wide bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
+      >
+        ← Inicio
+      </button>
     </div>
   </motion.div>
 )}
-
+  
   {/* FOOTER */}
 <motion.footer
   initial={{ opacity: 0, y: 20 }}
