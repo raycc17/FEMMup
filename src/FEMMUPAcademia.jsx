@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -10,8 +10,6 @@ const [progress] = useState(35);
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [showFooter, setShowFooter] = useState(false);
-
-import { useEffect } from "react"; // 👈 arriba en imports
 
 useEffect(() => {
   const handleScroll = () => {
