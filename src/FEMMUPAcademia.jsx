@@ -369,7 +369,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 20 }}
   transition={{ duration: 0.4 }}
-  className="fixed bottom-10 left-1/2 transform -translate-x-1/2 max-w-max text-center px-6 py-2 text-xs text-[#a8a1a1] bg-white/40 backdrop-blur-md rounded-full shadow-sm z-50 pointer-events-none"
+  className="fixed bottom-3 left-1/2 transform -translate-x-1/2 max-w-max text-center px-6 py-2 text-xs text-[#a8a1a1] bg-white/40 backdrop-blur-md rounded-full shadow-sm z-50 pointer-events-none"
 >
   <span className="pointer-events-auto">
     Ejecutado por la firma estratégica y creativa{" "}
