@@ -10,11 +10,23 @@ const [progress] = useState(35);
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 
-  const courses = [
-    { title: "Ecommerce Estratégico", modules: 6 },
-    { title: "Branding con Criterio", modules: 4 },
-    { title: "Mentalidad Empresarial", modules: 5 },
-  ];
+const courses = [
+  { 
+    title: "Ecommerce Estratégico", 
+    modules: 6,
+    image: "/ecommerce..png"
+  },
+  { 
+    title: "Branding con Criterio", 
+    modules: 4,
+    image: "/marca..png"
+  },
+  { 
+    title: "Mentalidad Empresarial", 
+    modules: 5,
+    image: "/mentalidadempresarial..png"
+  },
+];
 
   return (
 <div className={view === "login"
@@ -150,14 +162,29 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
           <h2 className="text-3xl font-semibold mb-6">Nuestros Programas</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {courses.map((course, index) => (
-              <Card key={index} className="rounded-2xl shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
-                  <p className="mb-4">{course.modules} módulos</p>
-                  <Button className="w-full">Ver detalles</Button>
-                </CardContent>
-              </Card>
-            ))}
+<Card key={index} className="rounded-3xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-300">
+  
+  {/* IMAGEN */}
+  <div className="h-48 w-full overflow-hidden">
+    <img
+      src={course.image}
+      alt={course.title}
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* CONTENIDO */}
+  <CardContent className="p-6 text-center">
+    <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
+    <p className="mb-4 text-gray-600">{course.modules} módulos</p>
+
+    <Button className="w-full bg-black text-white rounded-full hover:opacity-90">
+      Ver detalles
+    </Button>
+  </CardContent>
+
+</Card>
+        ))}
           </div>
         </motion.div>
       )}
