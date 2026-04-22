@@ -366,10 +366,10 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   
   {/* FOOTER */}
 <motion.footer
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 20 }}
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 10 }}
   transition={{ duration: 0.4 }}
-  className="className="fixed bottom-6 left-0 w-full text-center text-xs text-[#a8a1a1] z-50 pointer-events-none"
+  className="fixed bottom-8 left-0 w-full text-center text-xs text-[#a8a1a1] z-50 pointer-events-none"
 >
   <span className="pointer-events-auto">
     Ejecutado por la firma estratégica y creativa{" "}
@@ -377,7 +377,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       href="https://www.coronelco.lat"
       target="_blank"
       rel="noopener noreferrer"
-      className="font-normal hover:font-semibold transition-all"
+      className="hover:font-semibold transition-all"
     >
       Coronel&Co
     </a>
@@ -386,7 +386,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
       href="https://www.raysacoronel.com"
       target="_blank"
       rel="noopener noreferrer"
-      className="font-normal hover:font-semibold transition-all"
+      className="hover:font-semibold transition-all"
     >
       Raysa Coronel
     </a>
