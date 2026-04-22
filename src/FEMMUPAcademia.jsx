@@ -341,6 +341,30 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
     </div>
   </motion.div>
 )}
+
+  {/* FOOTER */}
+<footer className="w-full text-center py-6 text-sm text-gray-400">
+  Ejecutado por la firma estratégica y creativa{" "}
+  <a
+    href="https://www.coronelco.lat"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-normal hover:font-semibold transition-all"
+  >
+    Coronel&Co
+  </a>
+  . Creado por{" "}
+  <a
+    href="https://www.raysacoronel.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-normal hover:font-semibold transition-all"
+  >
+    Raysa Coronel
+  </a>
+</footer>
+  
     </div>
   );
 }
+
