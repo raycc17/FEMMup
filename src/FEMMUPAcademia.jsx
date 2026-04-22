@@ -9,6 +9,27 @@ const [view, setView] = useState("home");
 const [progress] = useState(35);
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
+const [showFooter, setShowFooter] = useState(false);
+
+import { useEffect } from "react"; // 👈 arriba en imports
+
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+
+    // Si estás cerca del final (100px antes)
+    if (scrollTop + windowHeight >= docHeight - 100) {
+      setShowFooter(true);
+    } else {
+      setShowFooter(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
 const courses = [
   { 
@@ -343,26 +364,33 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
 )}
 
   {/* FOOTER */}
-<footer className="fixed bottom-0 left-0 w-full text-center py-4 text-xs text-gray-400 bg-transparent z-50">
-  Ejecutado por la firma estratégica y creativa{" "}
-  <a
-    href="https://www.coronelco.lat"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-normal hover:font-semibold transition-all"
-  >
-    Coronel&Co
-  </a>
-  . Creado por{" "}
-  <a
-    href="https://www.raysacoronel.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-normal hover:font-semibold transition-all"
-  >
-    Raysa Coronel
-  </a>
-</footer>
+<motion.footer
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: showFooter ? 1 : 0, y: showFooter ? 0 : 20 }}
+  transition={{ duration: 0.4 }}
+  className="fixed bottom-0 left-0 w-full text-center py-4 text-xs text-gray-400 bg-transparent z-50 pointer-events-none"
+>
+  <span className="pointer-events-auto">
+    Ejecutado por la firma estratégica y creativa{" "}
+    <a
+      href="https://www.coronelco.lat"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-normal hover:font-semibold transition-all"
+    >
+      Coronel&Co
+    </a>
+    . Creado por{" "}
+    <a
+      href="https://www.raysacoronel.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-normal hover:font-semibold transition-all"
+    >
+      Raysa Coronel
+    </a>
+  </span>
+</motion.footer>
   
     </div>
   );
