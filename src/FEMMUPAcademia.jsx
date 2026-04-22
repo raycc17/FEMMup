@@ -359,7 +359,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
         className="w-full text-sm tracking-wide bg-gradient-to-r from-[#e9e1e1] to-[#d19898] bg-clip-text text-transparent hover:opacity-70 transition"
       >
         ← Inicio
-      </br>
+      <br/>
       </button>
     </div>
   </motion.div>
