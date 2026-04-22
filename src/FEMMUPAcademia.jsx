@@ -361,7 +361,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
     className="font-normal hover:font-semibold transition-all"
   >
     Raysa Coronel
-  </a>
+  </a> 
 </footer>
   
     </div>
