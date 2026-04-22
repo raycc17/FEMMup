@@ -13,33 +13,30 @@ const [showFooter, setShowFooter] = useState(false);
 
 useEffect(() => {
   const handleScroll = () => {
-    const scrollPosition = window.scrollY;
+    const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
-    const documentHeight = document.body.scrollHeight;
+    const docHeight = document.documentElement.scrollHeight;
 
-    // 👇 Si la página es corta → mostrar siempre
-    if (documentHeight <= windowHeight + 50) {
+    // 👇 Si NO hay scroll → mostrar siempre
+    if (docHeight <= windowHeight + 50) {
       setShowFooter(true);
       return;
     }
 
     // 👇 Si hay scroll → mostrar solo al final
-if (docHeight <= windowHeight) {
-  // No hay scroll → mostrar siempre
-  setShowFooter(true);
-} else if (scrollTop + windowHeight >= docHeight - 100) {
-  // Hay scroll → aparece al final
-  setShowFooter(true);
-} else {
-  setShowFooter(false);
-}
+    if (scrollTop + windowHeight >= docHeight - 100) {
+      setShowFooter(true);
+    } else {
+      setShowFooter(false);
+    }
   };
 
-  handleScroll(); // 👈 IMPORTANTE (para cargar bien al inicio)
+  handleScroll(); // importante
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
-const courses = [
+  
+  const courses = [
   { 
     title: "Ecommerce Estratégico", 
     modules: 6,
