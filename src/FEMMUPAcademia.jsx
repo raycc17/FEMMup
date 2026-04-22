@@ -311,7 +311,7 @@ className="group h-10 min-w-[120px] px-7 py-2 !rounded-full !border-0  text-base
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    className="min-h-screen flex flex-col items-center justify-start py-20 pb-40 px-6 overflow-y-auto bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
+    className="min-h-screen flex flex-col items-center justify-start py-20 pb-30 px-6 overflow-y-auto bg-gradient-to-br from-[#c79a9a] via-[#5b3a3a] to-black"
   >
     {/* Logo */}
     <div className="mb-16 text-center">
